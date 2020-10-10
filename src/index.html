@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcular Ações</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="content">
+
+    <div class="headbar"><h1>Bolsa de valores</h1></div>
+
+    <button class="button-style" type="submit" onclick="showForm()">Cadastrar Operação</button>
+
+    <div class="menu" style="display: none">
+      <p><b>Insira o código da ação:</b></p>
+      <input type="text" name="code" id="code" >
+
+      <p><b>Quantidade de ações:</b></p>
+      <input type="number" name="action" id="action" >
+
+      <p><b>Valor unitário da ação:</b></p>
+      <input type="number" min="1" step="any" name="valueAction" id="valueAction" >
+
+      <p><b>Custo da corretagem:</b></p>
+      <input type="number" min="1" step="any" name="cost" id="cost" >
+
+      <div class="buttons-submit">
+        <button id="buy-action" type="submit" onclick="buyAction()">Comprar</button>
+        <button id="sell-action" type="submit" onclick="sellAction()">Vender</button>
+      </div>
+    </div>
+
+    <h3 class="h3-title">Histórico de ações</h3>
+
+    <div class="table-result" >
+      <table id="table-result" class="table-style">
+        <thead>
+          <th>Código da ação</th>
+          <th>Quantidade de ações</th>
+          <th>Valor unitário da ação</th>
+          <th>Custo de corretagem</th>
+          <th>Valor total da Negociação</th>
+        </thead>
+      </table>
+    </div>
+
+  </div>
+
+<script src="js/script.js"></script>  
+
+</body>
+</html>
