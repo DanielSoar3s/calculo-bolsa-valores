@@ -1,4 +1,4 @@
-function showActionHistory(codeAction, action, valueUnityAction, cost, totalNegociation) {
+function showActionHistory(codeAction, action, valueUnityAction, cost, totalValueAction, rate, totalNegociation) {
   let result = document.getElementById('table-result');
 
   let resultLine = document.createElement('tr');
@@ -15,6 +15,18 @@ function showActionHistory(codeAction, action, valueUnityAction, cost, totalNego
   let resultCost = document.createElement('td');
   resultCost.innerHTML = cost;
 
+  let resultValueAction = document.createElement('td');
+  resultValueAction.innerHTML = totalValueAction;
+
+  let resultRate = document.createElement('td');
+  resultRate.innerHTML = rate;
+
+  let costNegociation = document.createElement('td');
+  costNegociation.innerHTML = costNegociation;
+
+  let setElementCost = document.createElement('td');
+  setElementCost.innerHTML = setElementCost;
+
   let resultTotalNegociation = document.createElement('td');
   resultTotalNegociation.innerHTML = totalNegociation.toFixed(2); 
 
@@ -22,7 +34,10 @@ function showActionHistory(codeAction, action, valueUnityAction, cost, totalNego
   resultLine.appendChild(resultColumnAction);
   resultLine.appendChild(resultUnityAction);
   resultLine.appendChild(resultCost);
+  resultLine.appendChild(resultValueAction);
+  resultLine.appendChild(resultRate);
   resultLine.appendChild(resultTotalNegociation);
+  
 
   result.appendChild(resultLine);
 
@@ -50,7 +65,7 @@ function buyAction () {
 
   let totalNegociation =  totalValueAction + rate;
 
-  showActionHistory(codeAction, action, valueUnityAction, cost, totalNegociation);
+  showActionHistory(codeAction, action, valueUnityAction, cost, totalValueAction, rate, totalNegociation,);
 
   
 }
@@ -76,7 +91,7 @@ function sellAction () {
 
   let totalNegociation =  totalValueAction - rate;
 
-  showActionHistory(codeAction, action, valueUnityAction, cost, totalNegociation);
+  showActionHistory(codeAction, action, valueUnityAction, cost, totalValueAction, rate, totalNegociation);
 
 }
 

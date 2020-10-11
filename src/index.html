@@ -18,16 +18,16 @@
 
     <div class="menu" style="display: none">
       <p><b>Insira o código da ação:</b></p>
-      <input type="text" name="code" id="code" >
+      <input type="text" name="code" id="code" maxlength="5" onfocus="this.value=''">
 
       <p><b>Quantidade de ações:</b></p>
-      <input type="number" name="action" id="action" >
+      <input type="number" name="action" id="action" onfocus="this.value=''" >
 
       <p><b>Valor unitário da ação:</b></p>
-      <input type="number" min="1" step="any" name="valueAction" id="valueAction" >
+      <input type="number" min="1" step="any" name="valueAction" id="valueAction" onfocus="this.value=''">
 
       <p><b>Custo da corretagem:</b></p>
-      <input type="number" min="1" step="any" name="cost" id="cost" >
+      <input type="number" min="1" step="any" name="cost" id="cost" onfocus="this.value=''">
 
       <div class="buttons-submit">
         <button id="buy-action" type="submit" onclick="buyAction()">Comprar</button>
@@ -44,6 +44,8 @@
           <th>Quantidade de ações</th>
           <th>Valor unitário da ação</th>
           <th>Custo de corretagem</th>
+          <th>Valor de compra</th>
+          <th>Taxas</th>
           <th>Valor total da Negociação</th>
         </thead>
       </table>

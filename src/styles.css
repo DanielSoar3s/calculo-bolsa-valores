@@ -18,7 +18,6 @@ input, button {
   outline: 0;
 }
 
-
 .content {
   display: flex;
   flex-direction: column;
@@ -77,6 +76,7 @@ input, button {
   margin-top: 5px;
 }
 
+
 .buttons-submit {
   margin-top: 30px;
   display: flex;
@@ -84,6 +84,13 @@ input, button {
   justify-content: center;
 }
 
+.buttons-submit button:first-child {
+  background-color: #6aad6a;
+}
+
+.buttons-submit button:last-child {
+  background-color: #FF0000;
+}
 
 .buttons-submit button {
   height: 34px;
@@ -118,7 +125,8 @@ div .table-style {
 
 div .table-style thead th {
   height: 50%;
-  color: #fff
+  color: #fff;
+  /* padding: 10px; */
 }
 
 div .table-style thead tr {
