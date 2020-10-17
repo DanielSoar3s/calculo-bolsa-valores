@@ -109,7 +109,7 @@ input, button {
 
 
 div .table-result {
-  max-width: 600px;
+  max-width: auto;
   margin-top: 50px;
   margin-bottom: 80px;
 }
